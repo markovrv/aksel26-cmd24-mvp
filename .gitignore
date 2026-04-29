@@ -46,6 +46,3 @@ coverage/
 # Temporary files
 tmp/
 temp/
-
-# Vite dev server
-vite.config.js

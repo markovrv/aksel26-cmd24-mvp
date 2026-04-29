@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: factory-gto
+    ports:
+      - "29426:3001"          # внешний порт 29426 -> внутренний 3001
+    volumes:
+      - db_data:/app/server/src/database   # сохраняем файл БД между перезапусками
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+    restart: unless-stopped
+
+volumes:
+  db_data:

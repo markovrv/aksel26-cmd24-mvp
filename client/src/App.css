@@ -1,0 +1,250 @@
+:root {
+    --bg: #eef5ff;
+    --text: #10203a;
+    --muted: #6d7688;
+    --blue: #1f63d6;
+    --blue2: #0f4eb8;
+    --card: #ffffff;
+    --shadow: 0 20px 50px rgba(38, 77, 140, 0.12);
+    --radius: 22px;
+    --radius-sm: 12px;
+    --border:  #e4e9f2;
+    --primary: #1f61d5;
+    --radius-lg: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+    background: radial-gradient(circle at 20% 0%, rgba(255,255,255,0.98), rgba(235,244,255,0.96) 50%, rgba(231,241,255,0.99) 100%);
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+h1 {
+    font-size: 63px;
+    font-weight: 900;
+    line-height: 0.96;
+    letter-spacing: -1.8px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #22304a;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    transition: 0.2s ease;
+    white-space: nowrap;
+    padding: 11px 24px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(180deg, #2b72e8, #1655c6);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(31, 99, 214, 0.18);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: linear-gradient(180deg, #6c757d, #495057);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(108, 117, 125, 0.18);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-1px);
+}
+
+/* Аналог btn-primary для опасных кнопок */
+.btn-danger {
+    background: linear-gradient(180deg, #dc3545, #b02a37);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(220, 53, 69, 0.18);
+}
+
+.btn-danger:hover {
+    transform: translateY(-1px);
+}
+
+.btn-ghost {
+    padding: 11px 24px;
+    border: 1px solid #9eb5d8;
+    background: #fff;
+    color: #2959a8;
+}
+
+.btn-outline {
+    padding: 11px 22px;
+    border: 1px solid #b7c8e6;
+    color: #3157a6;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.btn-large {
+    padding: 16px 28px;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: inherit;
+    border: 2px solid rgba(29, 64, 120, 0.1);
+    border-radius: var(--radius-sm);
+    background: #fff;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: var(--blue);
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+}
+
+.page-header {
+    padding: 48px 0;
+}
+
+.page-header h1 {
+    margin-bottom: 16px;
+}
+
+.page-header p {
+    font-size: 18px;
+    color: var(--muted);
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    color: var(--muted);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--muted);
+}
+
+.empty-state h3 {
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    background: #dce9ff;
+    color: #4c76c4;
+}
+
+.badge-open {
+    background: #def1e6;
+    color: #4d8b57;
+}
+
+.badge-closed {
+    background: #fee2e2;
+    color: #c62828;
+}
+
+.badge-pending {
+    background: #fff4df;
+    color: #f57c00;
+}
+
+select option {
+    background: white;
+    color: var(--text);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 42px;
+    }
+    .container {
+        padding: 0 16px;
+    }
+}
